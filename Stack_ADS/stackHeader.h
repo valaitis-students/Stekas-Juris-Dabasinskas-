@@ -15,19 +15,19 @@ typedef struct Stack {
 
 Stack* createStack();
 //Function creates a new stack and returns a pointer to it. If there is no memory to allocate, the function returns NULL.
-isEmpty(Stack *s);
+int isEmpty(Stack *s);
 //This function takes the stack pointer and checks if the top field equals to NULL. The function returns 0 if the stack is not empty and 1 if it is.
-push(Stack *s, Var data);
+void push(Stack *s, Var data);
 //This function takes the stack pointer and a variable that the user entered. Memory is allocated for a new node. The function does not return anything.
-pop(Stack *s);
+int pop(Stack *s);
 //This function takes the stack pointer and returns the variable that was entered last.
-sizeStack(Stack *s);
+int sizeStack(Stack *s);
 //This function takes the stack pointer and returns the number of elements in the stack.
-destroyStack(Stack *s);
+void destroyStack(Stack *s);
 //This function takes the stack pointer and frees the memory allocated for the stack.
-isFull(Stack *s);
+int isFull(Stack *s);
 //This function takes the stack pointer and checks if it is full by trying to allocate memory for a new node. If memory cannot be allocated, the function returns 1, if memory can be allocated, it returns 0.
-peek(Stack *s)
+Var peek(Stack *s);
 //This function takes the stack pointer and returns the top element without removing it if the stack is not full.
 
 
